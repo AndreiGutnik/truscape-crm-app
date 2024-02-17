@@ -1,4 +1,3 @@
-import Button from "./components/button";
 import StatusLabel, { Status } from "./components/status-label";
 
 export default function Home() {
