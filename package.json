@@ -2,11 +2,13 @@
   "name": "truscape-crm-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AndreiGutnik.github.io/truscape-crm-app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && gh-pages -d public"
   },
   "dependencies": {
     "clsx": "^2.1.0",
@@ -24,6 +26,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
+    "gh-pages": "6.1.1",
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",
     "tailwindcss": "^3.4.1",
