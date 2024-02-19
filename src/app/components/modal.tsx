@@ -11,7 +11,7 @@ export interface ModalProps {
 
 export default function Modal({ children, show, onClose }: ModalProps) {
   return (
-    <Transition.Root show={show} as={Fragment}>
+    <Transition.Root as={Fragment} show={show}>
       <Dialog
         as="div"
         className="fixed inset-0 z-50 flex items-center"

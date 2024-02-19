@@ -1,6 +1,6 @@
 "use client";
 
-import { Formik } from "formik";
+import { Form, Formik } from "formik";
 import React from "react";
 import LogoUploader from "./logo-uploader";
 import InputField from "./input-field";
@@ -15,7 +15,7 @@ export interface CompanyInputValues {
   description: string;
 }
 
-const InitialValues = {
+const initialValues = {
   name: "",
   status: "",
   country: "",
@@ -30,12 +30,10 @@ export interface CompanyFormProps {
 
 export default function CompanyForm({ onSubmit }: CompanyFormProps) {
   return (
-    <Formik initialValues={InitialValues} onSubmit={onSubmit}>
-      <form className="fles fles-col gap-10">
-        <p className="text-gray-900 text-xl font-semibold leading-7">
-          Add new company
-        </p>
-        <div className="flex  justify-center gap-7">
+    <Formik initialValues={initialValues} onSubmit={onSubmit}>
+      <Form className="flex flex-col gap-10">
+        <p className="mb-0.5 text-xl">Add new company</p>
+        <div className="flex gap-6">
           <div className="flex flex-col flex-1 gap-5">
             <LogoUploader label="Logo" placeholder="Upload photo" />
             <InputField label="Status" placeholder="Status" name="status" />
@@ -46,9 +44,9 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
             <InputField
               label="Category"
               placeholder="Category"
-              name="Category"
+              name="category"
             />
-            <InputField label="Date" placeholder="Date" name="date" />
+            <InputField label="Joined date" type="date" name="date" />
             <InputField
               label="Description"
               placeholder="Description"
@@ -57,7 +55,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
           </div>
         </div>
         <Button type="submit">Add company</Button>
-      </form>
+      </Form>
     </Formik>
   );
 }
