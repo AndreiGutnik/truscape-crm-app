@@ -16,9 +16,10 @@ jobs:
           npm install
           npm run lint
           npm run build
+          npm run export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: build
+          folder: out
