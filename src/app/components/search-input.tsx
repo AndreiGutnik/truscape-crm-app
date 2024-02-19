@@ -1,7 +1,8 @@
 import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 
-export interface SearchInputProps {
+export interface SearchInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   onSearchClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
