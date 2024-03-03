@@ -9,7 +9,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Sidebar />
-      <div>{children}</div>
+      <div className="ml-60">{children}</div>
     </>
   );
 }
